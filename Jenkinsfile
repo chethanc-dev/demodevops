@@ -4,20 +4,26 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building the application..."
+                echo 'Building the application...'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running tests..."
+                echo 'Running tests...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying the application..."
+                echo 'Deploying the application...'
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build completed successfully!'
         }
     }
 }
